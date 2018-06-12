@@ -12,6 +12,9 @@ const employee = require('../controllers/employee.controller'); //contiene todas
 //pero estas rutas vamos a usarlas como nuestra RestAPI, para enviar y recibir datos en formato json
 
 router.get('/', employee.getEmployees)
-
+router.post('/', employee.createEmployee);
+router.get('/:id', employee.getEmployee);
+router.put('/:id', employee.updateEmployee);
+router.delete('/:id', employee.deleteEmployee);
 
 module.exports = router;
